@@ -779,7 +779,7 @@ RIVE_DLL_INT32 Scene_Loop(intptr_t ref)
 {
     if (Scene* scene = reinterpret_cast<NativeScene*>(ref)->scene())
     {
-        return (int)reinterpret_cast<NativeScene*>(ref)->scene()->loop();
+        return (int)scene->loop();
     }
     return 0;
 }
@@ -788,7 +788,7 @@ RIVE_DLL_INT8_BOOL Scene_IsTranslucent(intptr_t ref)
 {
     if (Scene* scene = reinterpret_cast<NativeScene*>(ref)->scene())
     {
-        return reinterpret_cast<NativeScene*>(ref)->scene()->isTranslucent();
+        return scene->isTranslucent();
     }
     return 0;
 }
